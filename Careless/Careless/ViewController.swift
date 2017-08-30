@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Careless
 //
-//  Created by Harry Twan on 2017/8/30.
-//  Copyright © 2017年 Harry Twan. All rights reserved.
+//  Created by 段昊宇 on 2017/8/30.
+//  Copyright © 2017年 Desgard_Duan. All rights reserved.
 //
 
 import UIKit
