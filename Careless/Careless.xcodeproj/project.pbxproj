@@ -14,6 +14,7 @@
 		753DF4761F56EBCD00EC7534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753DF4741F56EBCD00EC7534 /* LaunchScreen.storyboard */; };
 		753DF4811F56EBCD00EC7534 /* CarelessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DF4801F56EBCD00EC7534 /* CarelessTests.swift */; };
 		753DF48C1F56EBCD00EC7534 /* CarelessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DF48B1F56EBCD00EC7534 /* CarelessUITests.swift */; };
+		78B41ED4BB79B57A4CA4A182 /* Pods_Careless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770F3738B857785B8EAA7FBF /* Pods_Careless.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		753DF4871F56EBCD00EC7534 /* CarelessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarelessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		753DF48B1F56EBCD00EC7534 /* CarelessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarelessUITests.swift; sourceTree = "<group>"; };
 		753DF48D1F56EBCD00EC7534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		770F3738B857785B8EAA7FBF /* Pods_Careless.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Careless.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A260AC72708A5BDC7326B31 /* Pods-Careless.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Careless.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Careless/Pods-Careless.debug.xcconfig"; sourceTree = "<group>"; };
+		E27D5E5763FEB5CD43408A18 /* Pods-Careless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Careless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Careless/Pods-Careless.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B41ED4BB79B57A4CA4A182 /* Pods_Careless.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18741116BD71FA8D970F3C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770F3738B857785B8EAA7FBF /* Pods_Careless.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		753DF45F1F56EBCD00EC7534 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,8 @@
 				753DF47F1F56EBCD00EC7534 /* CarelessTests */,
 				753DF48A1F56EBCD00EC7534 /* CarelessUITests */,
 				753DF4691F56EBCD00EC7534 /* Products */,
+				CD51F90D7205E9716AB37E22 /* Pods */,
+				18741116BD71FA8D970F3C03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +140,15 @@
 			path = CarelessUITests;
 			sourceTree = "<group>";
 		};
+		CD51F90D7205E9716AB37E22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A260AC72708A5BDC7326B31 /* Pods-Careless.debug.xcconfig */,
+				E27D5E5763FEB5CD43408A18 /* Pods-Careless.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 753DF4901F56EBCD00EC7534 /* Build configuration list for PBXNativeTarget "Careless" */;
 			buildPhases = (
+				CD1283254E3FAC7D0CF63C83 /* [CP] Check Pods Manifest.lock */,
 				753DF4641F56EBCD00EC7534 /* Sources */,
 				753DF4651F56EBCD00EC7534 /* Frameworks */,
 				753DF4661F56EBCD00EC7534 /* Resources */,
+				2149A2FF9AE05EBC4E8BC0BE /* [CP] Embed Pods Frameworks */,
+				CB72841EBAB8C55515C9275B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2149A2FF9AE05EBC4E8BC0BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Careless/Pods-Careless-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB72841EBAB8C55515C9275B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Careless/Pods-Careless-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD1283254E3FAC7D0CF63C83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		753DF4641F56EBCD00EC7534 /* Sources */ = {
@@ -421,10 +496,12 @@
 		};
 		753DF4911F56EBCD00EC7534 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A260AC72708A5BDC7326B31 /* Pods-Careless.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZDU6N35DM;
 				INFOPLIST_FILE = Careless/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farm.desgard.Careless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,10 +512,12 @@
 		};
 		753DF4921F56EBCD00EC7534 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27D5E5763FEB5CD43408A18 /* Pods-Careless.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZDU6N35DM;
 				INFOPLIST_FILE = Careless/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farm.desgard.Careless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
