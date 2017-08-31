@@ -78,14 +78,38 @@
 		D5EDB6961F57169500E08F4B /* Careless */ = {
 			isa = PBXGroup;
 			children = (
-				D5EDB6971F57169500E08F4B /* AppDelegate.swift */,
+				D5EDB6A91F585B8800E08F4B /* App */,
+				D5EDB6AA1F585BB300E08F4B /* Config */,
 				D5EDB6991F57169500E08F4B /* ViewController.swift */,
 				D5EDB69B1F57169500E08F4B /* Main.storyboard */,
-				D5EDB69E1F57169500E08F4B /* Assets.xcassets */,
 				D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */,
-				D5EDB6A31F57169500E08F4B /* Info.plist */,
 			);
 			path = Careless;
+			sourceTree = "<group>";
+		};
+		D5EDB6A91F585B8800E08F4B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6AB1F585BD700E08F4B /* New Group */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		D5EDB6AA1F585BB300E08F4B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6971F57169500E08F4B /* AppDelegate.swift */,
+				D5EDB69E1F57169500E08F4B /* Assets.xcassets */,
+				D5EDB6A31F57169500E08F4B /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		D5EDB6AB1F585BD700E08F4B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +403,7 @@
 				D5EDB6A81F57169500E08F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
