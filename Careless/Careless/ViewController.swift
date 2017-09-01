@@ -33,7 +33,7 @@ class ViewModel: NSObject {
     }
 }
 
-class ViewController: UIViewController {
+class SampleTableViewController: UIViewController {
     let tableView: UITableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
     let reuseIdentifier = "cell"
 
@@ -58,6 +58,14 @@ class ViewController: UIViewController {
         viewModel.getUsers()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+    }
+}
+
+class IndexViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
     }
 }
