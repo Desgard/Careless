@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		CD9861EEF985FB70EB1D027D /* Pods_Careless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6B8E45697ED609F32520A7 /* Pods_Careless.framework */; };
 		D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6971F57169500E08F4B /* AppDelegate.swift */; };
-		D5EDB69A1F57169500E08F4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6991F57169500E08F4B /* ViewController.swift */; };
+		D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6991F57169500E08F4B /* CareTabController.swift */; };
 		D5EDB69D1F57169500E08F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EDB69B1F57169500E08F4B /* Main.storyboard */; };
 		D5EDB69F1F57169500E08F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EDB69E1F57169500E08F4B /* Assets.xcassets */; };
 		D5EDB6A21F57169500E08F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */; };
+		D5EDB6B21F59B55400E08F4B /* CareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */; };
+		D5EDB6B61F5A223C00E08F4B /* TabItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */; };
+		D5EDB6B91F5A22B400E08F4B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B81F5A22B400E08F4B /* TabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		90BC486E25D0C38F7778EF0E /* Pods-Careless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Careless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Careless/Pods-Careless.release.xcconfig"; sourceTree = "<group>"; };
 		D5EDB6941F57169500E08F4B /* Careless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Careless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EDB6971F57169500E08F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5EDB6991F57169500E08F4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5EDB6991F57169500E08F4B /* CareTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTabController.swift; sourceTree = "<group>"; };
 		D5EDB69C1F57169500E08F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5EDB69E1F57169500E08F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5EDB6A11F57169500E08F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5EDB6A31F57169500E08F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareListViewController.swift; path = App/Controller/CareListViewController.swift; sourceTree = "<group>"; };
+		D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabItemsProvider.swift; path = App/Provider/ViewDataProvider/TabItemsProvider.swift; sourceTree = "<group>"; };
+		D5EDB6B81F5A22B400E08F4B /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = App/Model/TabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,6 @@
 			children = (
 				D5EDB6A91F585B8800E08F4B /* App */,
 				D5EDB6AA1F585BB300E08F4B /* Config */,
-				D5EDB6991F57169500E08F4B /* ViewController.swift */,
-				D5EDB69B1F57169500E08F4B /* Main.storyboard */,
-				D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */,
 			);
 			path = Careless;
 			sourceTree = "<group>";
@@ -90,7 +93,13 @@
 		D5EDB6A91F585B8800E08F4B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D5EDB6AB1F585BD700E08F4B /* New Group */,
+				D5EDB6B31F59B94B00E08F4B /* Provider */,
+				D5EDB6B01F59B4D000E08F4B /* Service */,
+				D5EDB6AF1F59B4B300E08F4B /* Support */,
+				D5EDB6AB1F585BD700E08F4B /* Model */,
+				D5EDB6AC1F59B3F800E08F4B /* View */,
+				D5EDB6AE1F59B40300E08F4B /* ViewModel */,
+				D5EDB6AD1F59B3FD00E08F4B /* Controller */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -105,11 +114,67 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
-		D5EDB6AB1F585BD700E08F4B /* New Group */ = {
+		D5EDB6AB1F585BD700E08F4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6B81F5A22B400E08F4B /* TabItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D5EDB6AC1F59B3F800E08F4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */,
+				D5EDB69B1F57169500E08F4B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D5EDB6AD1F59B3FD00E08F4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */,
+				D5EDB6991F57169500E08F4B /* CareTabController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D5EDB6AE1F59B40300E08F4B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "New Group";
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5EDB6AF1F59B4B300E08F4B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		D5EDB6B01F59B4D000E08F4B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		D5EDB6B31F59B94B00E08F4B /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6B41F5A21DE00E08F4B /* ViewDataProvider */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+		D5EDB6B41F5A21DE00E08F4B /* ViewDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */,
+			);
+			name = ViewDataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EDB69A1F57169500E08F4B /* ViewController.swift in Sources */,
+				D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */,
+				D5EDB6B61F5A223C00E08F4B /* TabItemsProvider.swift in Sources */,
 				D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */,
+				D5EDB6B91F5A22B400E08F4B /* TabItem.swift in Sources */,
+				D5EDB6B21F59B55400E08F4B /* CareListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

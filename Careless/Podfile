@@ -18,6 +18,7 @@ end
 target 'Careless' do
     shared_pods
     rxswift_pods
+    ui_build_pods
 end
 
 post_install do |installer|

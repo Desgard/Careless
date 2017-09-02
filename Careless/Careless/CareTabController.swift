@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxDataSources
+import ColorMatchTabs
 
 struct User {
     let followersCount: Int
@@ -62,11 +63,40 @@ class SampleTableViewController: UIViewController {
     }
 }
 
-class IndexViewController: UIViewController {
+class IndexViewController: ColorMatchTabsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        dataSource = self
+        reloadData()
     }
+}
+
+extension IndexViewController: ColorMatchTabsViewControllerDataSource {
+    func numberOfItems(inController controller: ColorMatchTabsViewController) -> Int {
+        return TabItemsProvider.items.count
+    }
+    
+    func tabsViewController(_ controller: ColorMatchTabsViewController, viewControllerAt index: Int) -> UIViewController {
+        return CareListViewController()
+    }
+    
+    func tabsViewController(_ controller: ColorMatchTabsViewController, titleAt index: Int) -> String {
+        return TabItemsProvider.items[index].title
+    }
+    
+    func tabsViewController(_ controller: ColorMatchTabsViewController, iconAt index: Int) -> UIImage {
+        return TabItemsProvider.items[index].normalImage
+    }
+    
+    func tabsViewController(_ controller: ColorMatchTabsViewController, hightlightedIconAt index: Int) -> UIImage {
+        return TabItemsProvider.items[index].highlightImage
+    }
+    
+    func tabsViewController(_ controller: ColorMatchTabsViewController, tintColorAt index: Int) -> UIColor {
+        return TabItemsProvider.items[index].tintColor
+    }
+    
 }
 
