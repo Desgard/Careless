@@ -12,7 +12,7 @@ def rxswift_pods
 end
 
 def ui_build_pods
-    pod 'ColorMatchTabs', '~> 2.0'
+    pod 'SwipeableTabBarController'
 end
 
 target 'Careless' do

@@ -19,7 +19,7 @@ class TabItemsProvider {
             ),
             TabItem(
                 title: "Password",
-                tintColor: UIColor.red,
+                tintColor: UIColor.blue,
                 normalImage: #imageLiteral(resourceName: "user_normal"),
                 highlightImage: #imageLiteral(resourceName: "user_highlight")
             ),
