@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,11 +46,11 @@
             </objects>
             <point key="canvasLocation" x="3684" y="-348.57571214392806"/>
         </scene>
-        <!--Care Tab Controller-->
+        <!--Folding Tab Bar Controller-->
         <scene sceneID="xjz-p4-lpf">
             <objects>
-                <tabBarController id="05Y-9h-RUS" customClass="CareTabController" customModule="Careless" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="imV-24-dqX">
+                <tabBarController id="05Y-9h-RUS" customClass="YALFoldingTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="imV-24-dqX" customClass="YALCustomHeightTabBar">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

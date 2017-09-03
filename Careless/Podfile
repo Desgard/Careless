@@ -13,6 +13,7 @@ end
 
 def ui_build_pods
     pod 'SwipeableTabBarController'
+    pod 'FoldingTabBar', '~> 1.1'
 end
 
 target 'Careless' do

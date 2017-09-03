@@ -66,13 +66,5 @@ class SampleTableViewController: UIViewController {
 class CareTabController: SwipeableTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        selectedViewController = viewControllers?[0]
-        if #available(iOS 10.0, *) {
-            tabBar.unselectedItemTintColor = UIColor.white.withAlphaComponent(0.6)
-        } else {
-            // Fallback on earlier versions
-        }
-        setSwipeAnimation(type: SwipeAnimationType.push)
     }
 }
