@@ -54,20 +54,11 @@ class CareListViewController: UIViewController {
     
     private func initialActions() {
         tableView.rx
-            .modelSelected(Account.self)
-            
-            .subscribe(
-                onNext: { value in
-                    print(value.username)
-                }
-            )
-            .disposed(by: disposeBag)
-        
-        tableView.rx
             .itemSelected
-            .map { indexPath in return indexPath }
+            .map { return $0 }
+            .withLatestFrom(viewModel.getAccontList()) { return ($0, $1) }
             .subscribe(
-                onNext: { indexPath in
+                onNext: { indexPath, account in
                     self.tableView.deselectRow(at: indexPath, animated: true)
                 }
             )
