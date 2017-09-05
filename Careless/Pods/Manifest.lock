@@ -1,0 +1,41 @@
+PODS:
+  - CryptoSwift (0.6.9)
+  - Differentiator (2.0.1)
+  - FoldingTabBar (1.1.2)
+  - lottie-ios (2.0.5)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxDataSources (2.0.1):
+    - Differentiator (~> 2.0)
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.6.1)
+  - RxViewController (0.2.0):
+    - RxCocoa (>= 3.0.0)
+    - RxSwift (>= 3.0.0)
+  - SwipeableTabBarController (1.0.5)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - FoldingTabBar (~> 1.1)
+  - lottie-ios
+  - RxCocoa (~> 3.0)
+  - RxDataSources
+  - RxSwift (~> 3.0)
+  - RxViewController
+  - SwipeableTabBarController
+
+SPEC CHECKSUMS:
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
+  Differentiator: 8555f40f5df08beb9bcf225724af295b90e738cb
+  FoldingTabBar: 3b1e54c0dfa6103e93e8d95d1e75a22c6d8e2843
+  lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxDataSources: 93c805010d4f5970e5204829a182bcdceab5adb5
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxViewController: 67cc7dde0f9e2ed941029eceec750c3ecb6ba74b
+  SwipeableTabBarController: a218e63d4ad2ebce71098536c4bd2768b11d55d2
+
+PODFILE CHECKSUM: 08e61d15aa5f5d86274a34722351a23ffe9b7638
+
+COCOAPODS: 1.2.1

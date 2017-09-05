@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7522ABD71F5BD01300F03CEC /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABD61F5BD01300F03CEC /* AppCommon.swift */; };
 		7522ABDA1F5C25FE00F03CEC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABD91F5C25FE00F03CEC /* UIColorExtension.swift */; };
+		7522ABDC1F5CDE1B00F03CEC /* CareConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABDB1F5CDE1B00F03CEC /* CareConfigViewController.swift */; };
+		75597E211F5E4BBF00EF9A0E /* CareBasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */; };
+		75597E231F5E4C2200EF9A0E /* CareModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */; };
 		CD9861EEF985FB70EB1D027D /* Pods_Careless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6B8E45697ED609F32520A7 /* Pods_Careless.framework */; };
 		D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6971F57169500E08F4B /* AppDelegate.swift */; };
 		D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6991F57169500E08F4B /* CareTabController.swift */; };
@@ -16,8 +19,7 @@
 		D5EDB69F1F57169500E08F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EDB69E1F57169500E08F4B /* Assets.xcassets */; };
 		D5EDB6A21F57169500E08F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */; };
 		D5EDB6B21F59B55400E08F4B /* CareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */; };
-		D5EDB6B61F5A223C00E08F4B /* TabItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */; };
-		D5EDB6B91F5A22B400E08F4B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B81F5A22B400E08F4B /* TabItem.swift */; };
+		D5EDB6B91F5A22B400E08F4B /* CareBasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6B81F5A22B400E08F4B /* CareBasicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		7522ABD01F5BBD3700F03CEC /* Careless-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Careless-Bridging-Header.h"; sourceTree = "<group>"; };
 		7522ABD61F5BD01300F03CEC /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCommon.swift; path = Config/AppCommon.swift; sourceTree = "<group>"; };
 		7522ABD91F5C25FE00F03CEC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = App/Extension/UIColorExtension.swift; sourceTree = "<group>"; };
+		7522ABDB1F5CDE1B00F03CEC /* CareConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareConfigViewController.swift; path = App/Controller/CareConfigViewController.swift; sourceTree = "<group>"; };
+		75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareBasicViewModel.swift; path = App/ViewModel/CareBasicViewModel.swift; sourceTree = "<group>"; };
+		75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareModelProtocol.swift; path = App/Model/CareModelProtocol.swift; sourceTree = "<group>"; };
 		90BC486E25D0C38F7778EF0E /* Pods-Careless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Careless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Careless/Pods-Careless.release.xcconfig"; sourceTree = "<group>"; };
 		D5EDB6941F57169500E08F4B /* Careless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Careless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EDB6971F57169500E08F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +40,7 @@
 		D5EDB6A11F57169500E08F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5EDB6A31F57169500E08F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareListViewController.swift; path = App/Controller/CareListViewController.swift; sourceTree = "<group>"; };
-		D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabItemsProvider.swift; path = App/Provider/ViewDataProvider/TabItemsProvider.swift; sourceTree = "<group>"; };
-		D5EDB6B81F5A22B400E08F4B /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = App/Model/TabItem.swift; sourceTree = "<group>"; };
+		D5EDB6B81F5A22B400E08F4B /* CareBasicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareBasicModel.swift; path = App/Model/CareBasicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				7522ABD81F5C25E100F03CEC /* Extension */,
-				D5EDB6B31F59B94B00E08F4B /* Provider */,
 				D5EDB6B01F59B4D000E08F4B /* Service */,
 				D5EDB6AF1F59B4B300E08F4B /* Support */,
-				D5EDB6AB1F585BD700E08F4B /* Model */,
 				D5EDB6AC1F59B3F800E08F4B /* View */,
+				D5EDB6AB1F585BD700E08F4B /* Model */,
 				D5EDB6AE1F59B40300E08F4B /* ViewModel */,
 				D5EDB6AD1F59B3FD00E08F4B /* Controller */,
 			);
@@ -133,7 +136,8 @@
 		D5EDB6AB1F585BD700E08F4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D5EDB6B81F5A22B400E08F4B /* TabItem.swift */,
+				75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */,
+				D5EDB6B81F5A22B400E08F4B /* CareBasicModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -150,8 +154,9 @@
 		D5EDB6AD1F59B3FD00E08F4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */,
 				D5EDB6991F57169500E08F4B /* CareTabController.swift */,
+				D5EDB6B11F59B55400E08F4B /* CareListViewController.swift */,
+				7522ABDB1F5CDE1B00F03CEC /* CareConfigViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 		D5EDB6AE1F59B40300E08F4B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -175,22 +181,6 @@
 			children = (
 			);
 			name = Service;
-			sourceTree = "<group>";
-		};
-		D5EDB6B31F59B94B00E08F4B /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				D5EDB6B41F5A21DE00E08F4B /* ViewDataProvider */,
-			);
-			name = Provider;
-			sourceTree = "<group>";
-		};
-		D5EDB6B41F5A21DE00E08F4B /* ViewDataProvider */ = {
-			isa = PBXGroup;
-			children = (
-				D5EDB6B51F5A223C00E08F4B /* TabItemsProvider.swift */,
-			);
-			name = ViewDataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7522ABD71F5BD01300F03CEC /* AppCommon.swift in Sources */,
+				7522ABDC1F5CDE1B00F03CEC /* CareConfigViewController.swift in Sources */,
 				7522ABDA1F5C25FE00F03CEC /* UIColorExtension.swift in Sources */,
 				D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */,
-				D5EDB6B61F5A223C00E08F4B /* TabItemsProvider.swift in Sources */,
+				75597E211F5E4BBF00EF9A0E /* CareBasicViewModel.swift in Sources */,
+				75597E231F5E4C2200EF9A0E /* CareModelProtocol.swift in Sources */,
 				D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */,
-				D5EDB6B91F5A22B400E08F4B /* TabItem.swift in Sources */,
+				D5EDB6B91F5A22B400E08F4B /* CareBasicModel.swift in Sources */,
 				D5EDB6B21F59B55400E08F4B /* CareListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

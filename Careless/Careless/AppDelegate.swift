@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupYALTabBarController()
+        setupNavigationStyle()
+        settingStatusStyle()
         return true
     }
 
@@ -44,22 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private extension AppDelegate {
+    
+    // Tabbar Setting
     func setupYALTabBarController() {
         guard let tabBarController = window?.rootViewController as? YALFoldingTabBarController else {
             return
         }
         
-        let item1 = YALTabBarItem(itemImage: UIImage(named: "nearby_icon"), leftItemImage: nil, rightItemImage: nil)
-        let item2 = YALTabBarItem(itemImage: UIImage(named: "profile_icon"), leftItemImage: UIImage(named: "edit_icon"), rightItemImage: nil)
-        tabBarController.leftBarItems = [item1, item2]
+        let item1 = YALTabBarItem(itemImage: UIImage(named: "profile_icon"), leftItemImage: UIImage(named: "edit_icon"), rightItemImage: nil)
+        tabBarController.leftBarItems = [item1, ]
         
         
-        let item3 = YALTabBarItem(itemImage: UIImage(named: "chats_icon"), leftItemImage: UIImage(named: "search_icon"), rightItemImage: UIImage(named: "new_chat_icon"))
-        let item4 = YALTabBarItem(itemImage: UIImage(named: "settings_icon"), leftItemImage: nil, rightItemImage: nil)
-        tabBarController.rightBarItems = [item3, item4]
+        let item2 = YALTabBarItem(itemImage: UIImage(named: "settings_icon"), leftItemImage: nil, rightItemImage: nil)
+        tabBarController.rightBarItems = [item2, ]
         
         tabBarController.centerButtonImage = UIImage(named:"plus_icon")!
-        tabBarController.selectedIndex = 1
+        tabBarController.selectedIndex = 0
         
         //customize tabBarView
         tabBarController.tabBarView.extraTabBarItemHeight = YALExtraTabBarItemsDefaultHeight;
@@ -70,6 +72,23 @@ private extension AppDelegate {
         tabBarController.tabBarViewHeight = YALTabBarViewDefaultHeight;
         tabBarController.tabBarView.tabBarViewEdgeInsets = YALTabBarViewHDefaultEdgeInsets;
         tabBarController.tabBarView.tabBarItemsEdgeInsets = YALTabBarViewItemsDefaultEdgeInsets;
+    }
+    
+    // Naviagtion bar Setting
+    func setupNavigationStyle() {
+        let navbarFont = UIFont(name: "SnellRoundhand-Black", size: 24) ?? UIFont.systemFont(ofSize: 17)
+        
+        UINavigationBar.appearance().barTintColor = UIColor.tabbarColor
+        UINavigationBar.appearance().tintColor = .white
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
+    }
+    
+    // Status Bar Setting
+    func settingStatusStyle() {
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 }
 

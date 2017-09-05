@@ -9,16 +9,23 @@ def rxswift_pods
     pod 'RxSwift', '~> 3.0'
     pod 'RxCocoa', '~> 3.0'
     pod 'RxDataSources'
+    pod 'RxViewController'
+end
+
+def tool_pods
+    pod 'CryptoSwift'
 end
 
 def ui_build_pods
     pod 'SwipeableTabBarController'
     pod 'FoldingTabBar', '~> 1.1'
+    pod 'lottie-ios'
 end
 
 target 'Careless' do
     shared_pods
     rxswift_pods
+    tool_pods
     ui_build_pods
 end
 

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Care Config View Controller-->
         <scene sceneID="TfP-9x-2a3">
             <objects>
-                <viewController id="AVX-sY-TRN" sceneMemberID="viewController">
+                <viewController id="AVX-sY-TRN" customClass="CareConfigViewController" customModule="Careless" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpc-6K-OkJ"/>
                         <viewControllerLayoutGuide type="bottom" id="4jc-1o-MsF"/>
@@ -19,15 +19,15 @@
                     <view key="view" contentMode="scaleToFill" id="FOH-hA-g7i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="bO8-Ij-pv8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S77-qh-cuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="306.29685157421289"/>
+            <point key="canvasLocation" x="3638" y="411"/>
         </scene>
-        <!--Care List View Controller-->
+        <!--Password-->
         <scene sceneID="Vt6-SI-ILd">
             <objects>
                 <viewController id="e2i-S1-rRK" customClass="CareListViewController" customModule="Careless" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,11 +40,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TVK-dC-3Ka"/>
+                    <navigationItem key="navigationItem" title="Password" id="TVK-dC-3Ka"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDB-7A-pBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="-348.57571214392806"/>
+            <point key="canvasLocation" x="3638" y="-487"/>
         </scene>
         <!--Folding Tab Bar Controller-->
         <scene sceneID="xjz-p4-lpf">
@@ -81,7 +81,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDx-CY-O4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="-348.57571214392806"/>
+            <point key="canvasLocation" x="2716" y="-487"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="cQP-Vn-ULc">
@@ -100,7 +100,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SB-37-hGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="306.29685157421289"/>
+            <point key="canvasLocation" x="2690" y="411"/>
         </scene>
     </scenes>
 </document>
