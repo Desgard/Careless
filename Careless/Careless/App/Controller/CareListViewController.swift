@@ -31,8 +31,10 @@ class CareListViewController: UIViewController {
     
     private func initialViews() {
         tableView = UITableView.init(frame: view.bounds, style: .grouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.backgroundColor = UIColor.carelessColor
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(CareListTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
         view.addSubview(tableView)
     }
@@ -40,9 +42,8 @@ class CareListViewController: UIViewController {
     private func initialDatas() {
         dataSource.configureCell = {
             _, tableView, indexPath, account in
-            let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath)
-            cell.textLabel?.text = account.username
-            cell.textLabel?.textColor = .white
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath) as! CareListTableViewCell
+            cell.account = account
             cell.backgroundColor = .clear
             return cell
         }
