@@ -9,9 +9,21 @@
 import UIKit
 
 struct Account: CareBasicModelProtocol {
+    
+    enum Category: String {
+        case social = "Social Media"
+        case email = "Email"
+        case life = "Life"
+        case entertainment = "Entertainment"
+        case study = "Study Online"
+        case bbs = "BBS"
+        case other = "Other"
+    }
+    
     let username: String
     let password: String
     let email: String
     let website: String
+    let type: Account.Category
     let icon: UIImage?
 }

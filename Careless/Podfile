@@ -14,6 +14,7 @@ end
 
 def tool_pods
     pod 'CryptoSwift'
+    pod 'SnapKit', '~> 3.2.0'
 end
 
 def ui_build_pods

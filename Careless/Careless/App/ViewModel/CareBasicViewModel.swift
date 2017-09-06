@@ -13,13 +13,17 @@ import RxDataSources
 
 class CareBasicViewModel: NSObject {
     
+    let accounts: [Account] = []
+    
+    let accountsTest = [
+        Account(username: "Desgard_Duan", password: "123456", email: "gua@desgard.com", website: "https://github.com", type: .social, icon: nil),
+        Account(username: "Desgard_Duan", password: "123456", email: "gua@desgard.com", website: "https://github.com", type: .life, icon: nil),
+    ]
+    
     public func getAccontList() -> Observable<[SectionModel<String, Account>]> {
         return Observable.create({ observer -> Disposable in
             // 暂时给出测试数据
-            let accounts = [
-                Account(username: "Desgard_Duan", password: "123456", email: "gua@desgard.com", website: "https://github.com", icon: nil),
-                Account(username: "Desgard_Duan", password: "123456", email: "gua@desgard.com", website: "https://github.com", icon: nil),
-            ]
+            let accounts = self.accountsTest
             let section = [SectionModel(model: "", items: accounts)]
             observer.onNext(section)
             observer.onCompleted()
