@@ -13,6 +13,8 @@
 		75597E211F5E4BBF00EF9A0E /* CareBasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */; };
 		75597E231F5E4C2200EF9A0E /* CareModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */; };
 		75597E2C1F5EC38300EF9A0E /* CareListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E2B1F5EC38300EF9A0E /* CareListTableViewCell.swift */; };
+		75597E361F60148B00EF9A0E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E351F60148B00EF9A0E /* UIImageExtension.swift */; };
+		75597E381F601E0E00EF9A0E /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E371F601E0E00EF9A0E /* UISearchBarExtension.swift */; };
 		CD9861EEF985FB70EB1D027D /* Pods_Careless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6B8E45697ED609F32520A7 /* Pods_Careless.framework */; };
 		D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6971F57169500E08F4B /* AppDelegate.swift */; };
 		D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EDB6991F57169500E08F4B /* CareTabController.swift */; };
@@ -33,6 +35,8 @@
 		75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareBasicViewModel.swift; path = App/ViewModel/CareBasicViewModel.swift; sourceTree = "<group>"; };
 		75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareModelProtocol.swift; path = App/Model/CareModelProtocol.swift; sourceTree = "<group>"; };
 		75597E2B1F5EC38300EF9A0E /* CareListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareListTableViewCell.swift; path = App/View/CareList/CareListTableViewCell.swift; sourceTree = "<group>"; };
+		75597E351F60148B00EF9A0E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = App/Extension/UIImageExtension.swift; sourceTree = "<group>"; };
+		75597E371F601E0E00EF9A0E /* UISearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchBarExtension.swift; path = App/Extension/UISearchBarExtension.swift; sourceTree = "<group>"; };
 		90BC486E25D0C38F7778EF0E /* Pods-Careless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Careless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Careless/Pods-Careless.release.xcconfig"; sourceTree = "<group>"; };
 		D5EDB6941F57169500E08F4B /* Careless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Careless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EDB6971F57169500E08F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				7522ABD91F5C25FE00F03CEC /* UIColorExtension.swift */,
+				75597E351F60148B00EF9A0E /* UIImageExtension.swift */,
+				75597E371F601E0E00EF9A0E /* UISearchBarExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -323,8 +329,10 @@
 				7522ABDC1F5CDE1B00F03CEC /* CareConfigViewController.swift in Sources */,
 				75597E2C1F5EC38300EF9A0E /* CareListTableViewCell.swift in Sources */,
 				7522ABDA1F5C25FE00F03CEC /* UIColorExtension.swift in Sources */,
+				75597E361F60148B00EF9A0E /* UIImageExtension.swift in Sources */,
 				D5EDB69A1F57169500E08F4B /* CareTabController.swift in Sources */,
 				75597E211F5E4BBF00EF9A0E /* CareBasicViewModel.swift in Sources */,
+				75597E381F601E0E00EF9A0E /* UISearchBarExtension.swift in Sources */,
 				75597E231F5E4C2200EF9A0E /* CareModelProtocol.swift in Sources */,
 				D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */,
 				D5EDB6B91F5A22B400E08F4B /* CareBasicModel.swift in Sources */,

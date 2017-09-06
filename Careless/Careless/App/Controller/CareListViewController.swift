@@ -14,12 +14,13 @@ import RxViewController
 
 class CareListViewController: UIViewController {
     
-    var tableView: UITableView!
-    let reuseIdentifier = "cell"
+    private var tableView: UITableView!
+    private var searchBar: UISearchBar!
     
-    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Account>>()
-    let viewModel = CareBasicViewModel()
-    let disposeBag = DisposeBag()
+    private let reuseIdentifier = "cell"
+    private let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Account>>()
+    private let viewModel = CareBasicViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +31,23 @@ class CareListViewController: UIViewController {
     }
     
     private func initialViews() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(color: UIColor.tabbarColor), for: .default)
+        
         tableView = UITableView.init(frame: view.bounds, style: .grouped)
         tableView.backgroundColor = UIColor.carelessColor
         tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
         tableView.register(CareListTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
+        searchBar = UISearchBar.init()
+        searchBar.barStyle = .black
+        searchBar.barTintColor = UIColor.tabbarColor
+        searchBar.placeholder = "Filter Keywords"
+        searchBar.setBackgroundImage(UIImage.imageWithColor(color: UIColor.tabbarColor), for: .any, barMetrics: .default)
+        
         view.addSubview(tableView)
+        view.addSubview(searchBar)
     }
     
     private func initialDatas() {
@@ -46,6 +57,11 @@ class CareListViewController: UIViewController {
             cell.account = account
             cell.backgroundColor = .clear
             return cell
+        }
+        
+        dataSource.titleForHeaderInSection = {
+            ds, index in
+            return "Social Media"
         }
         
         viewModel.getAccontList()
@@ -64,9 +80,25 @@ class CareListViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
+        
+        searchBar.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .filter{ return $0.characters.count == 0 }
+            .subscribe(onNext: { _ in self.searchBar.resignFirstResponder() })
+            .disposed(by: disposeBag)
+    
     }
     
     private func initialLayouts() {
         
+        searchBar.snp.makeConstraints { make in
+            make.top.left.right.equalTo(self.view)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(self.searchBar.snp.bottom)
+            make.left.right.bottom.equalTo(self.view)
+        }
     }
 }

@@ -83,7 +83,7 @@ private extension AppDelegate {
         
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: UIColor.tabbarColor)
     }
     
     // Status Bar Setting

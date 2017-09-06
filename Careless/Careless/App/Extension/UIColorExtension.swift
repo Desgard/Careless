@@ -15,6 +15,12 @@ extension UIColor {
     
     // tabbar color
     static let tabbarColor = UIColor(hex: 0x1D1D25)
+    
+    // separtor line color
+    static let separatorLineColor = UIColor(hex: 0x4F4F5E)
+    
+    // subtitle font color
+    static let subtitleFontColor = UIColor(hex: 0x8D8D94)
 }
 
 extension UIColor {
