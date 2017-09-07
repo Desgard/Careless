@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class CareConfigViewController: UIViewController {
+class CareConfigViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
