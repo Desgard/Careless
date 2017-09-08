@@ -10,6 +10,8 @@
 		7522ABD71F5BD01300F03CEC /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABD61F5BD01300F03CEC /* AppCommon.swift */; };
 		7522ABDA1F5C25FE00F03CEC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABD91F5C25FE00F03CEC /* UIColorExtension.swift */; };
 		7522ABDC1F5CDE1B00F03CEC /* CareConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522ABDB1F5CDE1B00F03CEC /* CareConfigViewController.swift */; };
+		754857181F6242BB0001AF27 /* CareLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754857171F6242BB0001AF27 /* CareLaunchView.swift */; };
+		7548571B1F62430A0001AF27 /* care_launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548571A1F62430A0001AF27 /* care_launch.json */; };
 		75597E211F5E4BBF00EF9A0E /* CareBasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */; };
 		75597E231F5E4C2200EF9A0E /* CareModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */; };
 		75597E2C1F5EC38300EF9A0E /* CareListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75597E2B1F5EC38300EF9A0E /* CareListTableViewCell.swift */; };
@@ -32,6 +34,8 @@
 		7522ABD61F5BD01300F03CEC /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCommon.swift; path = Config/AppCommon.swift; sourceTree = "<group>"; };
 		7522ABD91F5C25FE00F03CEC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = App/Extension/UIColorExtension.swift; sourceTree = "<group>"; };
 		7522ABDB1F5CDE1B00F03CEC /* CareConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareConfigViewController.swift; path = App/Controller/CareConfigViewController.swift; sourceTree = "<group>"; };
+		754857171F6242BB0001AF27 /* CareLaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareLaunchView.swift; path = App/View/CareAnimation/CareLaunchView.swift; sourceTree = "<group>"; };
+		7548571A1F62430A0001AF27 /* care_launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = care_launch.json; sourceTree = "<group>"; };
 		75597E201F5E4BBF00EF9A0E /* CareBasicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareBasicViewModel.swift; path = App/ViewModel/CareBasicViewModel.swift; sourceTree = "<group>"; };
 		75597E221F5E4C2200EF9A0E /* CareModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareModelProtocol.swift; path = App/Model/CareModelProtocol.swift; sourceTree = "<group>"; };
 		75597E2B1F5EC38300EF9A0E /* CareListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareListTableViewCell.swift; path = App/View/CareList/CareListTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +92,22 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		754857161F6242950001AF27 /* CareAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				754857171F6242BB0001AF27 /* CareLaunchView.swift */,
+			);
+			name = CareAnimation;
+			sourceTree = "<group>";
+		};
+		754857191F6242DE0001AF27 /* Assets-Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				7548571A1F62430A0001AF27 /* care_launch.json */,
+			);
+			name = "Assets-Lottie";
+			sourceTree = "<group>";
+		};
 		75597E2A1F5EC32800EF9A0E /* CareList */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +160,7 @@
 		D5EDB6AA1F585BB300E08F4B /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				754857191F6242DE0001AF27 /* Assets-Lottie */,
 				7522ABD01F5BBD3700F03CEC /* Careless-Bridging-Header.h */,
 				D5EDB6971F57169500E08F4B /* AppDelegate.swift */,
 				7522ABD61F5BD01300F03CEC /* AppCommon.swift */,
@@ -161,6 +182,7 @@
 		D5EDB6AC1F59B3F800E08F4B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				754857161F6242950001AF27 /* CareAnimation */,
 				75597E2A1F5EC32800EF9A0E /* CareList */,
 				D5EDB6A01F57169500E08F4B /* LaunchScreen.storyboard */,
 				D5EDB69B1F57169500E08F4B /* Main.storyboard */,
@@ -265,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5EDB6A21F57169500E08F4B /* LaunchScreen.storyboard in Resources */,
+				7548571B1F62430A0001AF27 /* care_launch.json in Resources */,
 				D5EDB69F1F57169500E08F4B /* Assets.xcassets in Resources */,
 				D5EDB69D1F57169500E08F4B /* Main.storyboard in Resources */,
 			);
@@ -337,6 +360,7 @@
 				D5EDB6981F57169500E08F4B /* AppDelegate.swift in Sources */,
 				D5EDB6B91F5A22B400E08F4B /* CareBasicModel.swift in Sources */,
 				D5EDB6B21F59B55400E08F4B /* CareListViewController.swift in Sources */,
+				754857181F6242BB0001AF27 /* CareLaunchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

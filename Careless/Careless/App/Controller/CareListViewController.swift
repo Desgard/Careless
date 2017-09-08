@@ -48,6 +48,7 @@ class CareListViewController: UIViewController {
         
         view.addSubview(tableView)
         view.addSubview(searchBar)
+        UIApplication.shared.keyWindow?.addSubview(CareLaunchView.init(frame: UIScreen.main.bounds))
     }
     
     private func initialDatas() {
